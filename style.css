@@ -1,0 +1,225 @@
+/* reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+
+
+:root {
+
+  /* Colors */ 
+  --background-color: #0F0F0F;
+  --stroke-color: #1D1D1D;
+  --hover-color: #1D1D1D;
+  --secondary-color: #585F74;
+  --primary-color: #277EFF;
+  --text-color: #fafafa;
+  --border-default: 0.5px solid var(--stroke-color);
+  
+
+}
+
+body {
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);  
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;  
+  font-style: normal;
+  position: relative;
+  
+}
+
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+  height: 64px;
+  
+}
+
+nav {
+  display: inline-flex;
+  align-items: center;  
+  height: 100%;
+  width: fit-content;
+  gap: 1.5rem;
+  padding: 1.0rem 1.5rem;
+  border: var(--border-default);
+  border-radius: 71px;
+
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.mainContentUpload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 200px);
+
+}
+
+
+
+.menuItem {
+
+  padding: 12px 8px;  
+  border-radius: 4px;
+  min-width: fit-content;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease-in-out 300ms;
+  color: var(--secondary-color);
+
+}
+
+.menuItem:hover, .menuItem:first-child {
+ 
+  background-color: var(--hover-color);
+  cursor: pointer;
+  color: var(--text-color);
+  
+}
+
+.menuItem:first-child {
+  font-weight: bold;
+}
+
+.effectBlur {
+width: 314px;
+height: 314px;
+flex-shrink: 0;
+border-radius: 314px;
+background: var(--primary-color);
+filter: blur(109.94999694824219px);
+z-index: -1;
+position: absolute;
+left: calc(50% - (314px/2));
+top: calc(55% - (314px/2));
+}
+
+
+
+.iconFrame {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ph-upload-simple {
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.uploadCard {
+  border: var(--border-default);
+  border-radius: 24px;
+
+  display: flex;
+  background-color: var(--background-color);
+  align-items: center;
+  justify-content: center;
+  width: 708px;
+  height: 470px;
+  transition: all ease-in-out 300ms;
+}
+
+.uploadCard:hover{
+  cursor: pointer;
+  background-color: var(--hover-color);
+  transition: all ease-in-out 300ms;
+}
+
+.uploadCard:hover ~ .effectBlur{
+width: 628px;
+height: 628px;
+}
+
+.content {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 19px;
+}
+
+.contentText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+
+.textHint {
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+.boldText {
+  font-weight: 700;
+  color: var(--text-color);
+}
